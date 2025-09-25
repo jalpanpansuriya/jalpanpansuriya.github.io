@@ -5,51 +5,96 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Jalpan Pansuriya - Resume Website</title>
   <link rel="stylesheet" href="style.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome for Icons -->
+   <script src="https://kit.fontawesome.com/8291c6847e.js" crossorigin="anonymous"></script>
 </head>
 <body>
-  <div class="container">
-    <img src="profile.jpg" alt="Profile Picture" class="profile">
-    <h1>Jalpan Pansuriya</h1>
-    <p>BS CS @ASU | Data Analyst & Engineer | Entrepreneurial Aspirant</p>
-
+  <!-- Navigation -->
+  <header>
     <nav>
-      <a href="https://www.linkedin.com/in/jpansuri">LinkedIn</a> |
-      <a href="mailto:jpansuri@asu.edu">Email</a> |
-      <a href="resume.pdf">Resume</a>
+        <a href="#about"><i class="fas fa-user"></i> About</a>
+        <a href="#skills"><i class="fas fa-code"></i> Skills</a>
+        <a href="#experience"><i class="fas fa-briefcase"></i> Experience</a>
+        <a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a>
+        <a href="#education"><i class="fas fa-graduation-cap"></i> Education</a>
     </nav>
+  </header>
 
-    <h2>Summary</h2>
-    <p>Computer Science graduate with experience in data systems, backend development, and automation. Skilled in Python, SQL, Tableau, Power BI, and AWS. Actively seeking roles in Data Engineering, Analytics, and Business Tech.</p>
+  <div class="container">
+    <!-- About -->
+    <section id="about">
+      <img src="profile.jpg" alt="Profile Picture" class="profile">
+      <h1>Jalpan Pansuriya</h1>
+      <p>BS CS @ASU | Data Analyst & Engineer | Entrepreneurial Aspirant</p>
 
-    <h2>Skills</h2>
-    <div class="skills">
-      <span>Python, SQL, Tableau</span>
-      <span>Power BI, Excel</span>
-      <span>AWS, Snowflake</span>
-      <span>Next.js, Node.js</span>
-    </div>
+      <div class="links">
+        <a href="https://www.linkedin.com/in/jpansuri"><i class="fab fa-linkedin"></i></a>
+        <a href="mailto:jpansuri@asu.edu"><i class="fas fa-envelope"></i></a>
+        <a href="resume.pdf"><i class="fas fa-file"></i></a>
+      </div>
+    </section>
 
-    <h2>Experience</h2>
-    <p><strong>Software Developer Intern | Next Play Games</strong> (2025–Present)</p>
-    <ul>
-      <li>Developed features for Sportlingo app (React Native, TypeScript).</li>
-      <li>Implemented Mixpanel analytics for retention tracking.</li>
-      <li>Optimized workflows using AWS (EC2, RDS).</li>
-    </ul>
+    <!-- Summary -->
+    <section id="summary">
+      <h2>Summary</h2>
+      <p>Computer Science graduate with experience in data systems, backend development, and automation. Skilled in Python, SQL, Tableau, Power BI, and AWS. Actively seeking roles in Data Engineering, Analytics, and Business Tech.</p>
+    </section>
 
-    <p><strong>Data Analyst | ASU Law School</strong> (2023–2025)</p>
-    <ul>
-      <li>Automated reporting using SQL, Python, Power BI.</li>
-      <li>Built dashboards to track budgets and reimbursements.</li>
-    </ul>
+    <!-- Skills -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills">
+        <span>Python</span>
+        <span>SQL</span>
+        <span>Tableau</span>
+        <span>Power BI</span>
+        <span>Excel</span>
+        <span>AWS</span>
+        <span>Snowflake</span>
+        <span>Next.js</span>
+        <span>Node.js</span>
+      </div>
+    </section>
 
-    <h2>Projects</h2>
-    <p><strong>Capstone Project: SCIA Platform</strong> – Automated capstone workflows using Next.js, Node.js, MySQL.</p>
-    <p><strong>BookBuddy iOS App</strong> – Swift-based library app with API integration.</p>
+    <!-- Experience -->
+    <section id="experience">
+      <h2>Experience</h2>
+      <div class="card">
+        <h3>Software Developer Intern | Next Play Games <span>(2025–Present)</span></h3>
+        <ul>
+          <li>Developed features for Sportlingo app (React Native, TypeScript).</li>
+          <li>Implemented Mixpanel analytics for retention tracking.</li>
+          <li>Optimized workflows using AWS (EC2, RDS).</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Data Analyst | ASU Law School <span>(2023–2025)</span></h3>
+        <ul>
+          <li>Automated reporting using SQL, Python, Power BI.</li>
+          <li>Built dashboards to track budgets and reimbursements.</li>
+        </ul>
+      </div>
+    </section>
 
-    <h2>Education</h2>
-    <p><strong>B.S. Computer Science</strong>, Arizona State University (2025)<br>
-       GPA: 4.0, Summa Cum Laude</p>
+    <!-- Projects -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <div class="card">
+        <p><strong>Capstone Project: SCIA Platform</strong> – Automated capstone workflows using Next.js, Node.js, MySQL.</p>
+      </div>
+      <div class="card">
+        <p><strong>BookBuddy iOS App</strong> – Swift-based library app with API integration.</p>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+      <h2>Education</h2>
+      <p><strong>B.S. Computer Science</strong>, Arizona State University (2025)<br>
+         GPA: 4.0, Summa Cum Laude</p>
+    </section>
   </div>
 </body>
 </html>

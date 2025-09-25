@@ -1,33 +1,93 @@
+/* General */
 body {
-  background: #121212;
-  color: #fff;
-  font-family: Arial, sans-serif;
+  background: #0d1117;
+  color: #e6edf3;
+  font-family: 'Poppins', sans-serif;
   margin: 0;
   padding: 0;
-  text-align: center;
 }
 
-.container {
+h1, h2, h3 {
+  font-weight: 600;
+}
+
+section {
   max-width: 800px;
-  margin: auto;
+  margin: 60px auto;
+  text-align: center;
   padding: 20px;
 }
 
-.profile {
-  width: 150px;
-  border-radius: 50%;
+/* Navigation */
+header {
+  background: #161b22;
+  padding: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  text-align: center;
 }
 
-nav a {
-  color: #00bcd4;
+header a {
+  color: #58a6ff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+header a:hover {
+  color: #1f6feb;
+}
+
+/* Profile */
+.profile {
+  width: 160px;
+  border-radius: 50%;
+  margin: 20px 0;
+}
+
+.links a {
+  color: #58a6ff;
   margin: 0 10px;
+  font-size: 22px;
   text-decoration: none;
 }
 
+.links a:hover {
+  color: #1f6feb;
+}
+
+/* Skills */
 .skills span {
   display: inline-block;
-  background: #1e1e1e;
-  padding: 8px 12px;
-  margin: 5px;
-  border-radius: 8px;
+  background: #21262d;
+  padding: 10px 15px;
+  margin: 6px;
+  border-radius: 20px;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.skills span:hover {
+  background: #58a6ff;
+  color: white;
+}
+
+/* Cards */
+.card {
+  background: #161b22;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 20px 0;
+  text-align: left;
+}
+
+.card h3 {
+  margin-top: 0;
+  color: #58a6ff;
+}
+
+.card span {
+  font-size: 14px;
+  color: #8b949e;
 }
