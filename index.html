@@ -8,93 +8,154 @@
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <!-- Font Awesome for Icons -->
-   <script src="https://kit.fontawesome.com/8291c6847e.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/8291c6847e.js" crossorigin="anonymous"></script>
 </head>
 <body>
   <!-- Navigation -->
   <header>
-    <nav>
-        <a href="#about"><i class="fas fa-user"></i> About</a>
-        <a href="#skills"><i class="fas fa-code"></i> Skills</a>
-        <a href="#experience"><i class="fas fa-briefcase"></i> Experience</a>
-        <a href="#projects"><i class="fas fa-project-diagram"></i> Projects</a>
-        <a href="#education"><i class="fas fa-graduation-cap"></i> Education</a>
-    </nav>
+    <div class="header-content">
+      <div class="logo">Jalpan Pansuriya</div>
+      <nav>
+        <a href="#hero">About</a>
+        <a href="#mission">Mission</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+      </nav>
+    </div>
   </header>
 
-  <div class="container">
-    <!-- About -->
-    <section id="about">
+  <!-- Hero Section -->
+  <section id="hero" class="hero-section">
+    <div class="hero-content">
       <img src="profile.jpg" alt="Profile Picture" class="profile">
       <h1>Jalpan Pansuriya</h1>
-      <p>BS CS @ASU | Data Analyst & Engineer | Entrepreneurial Aspirant</p>
-
+      <p class="title">Data Analyst & Software Developer</p>
+      
       <div class="links">
         <a href="https://www.linkedin.com/in/jpansuri"><i class="fab fa-linkedin"></i></a>
         <a href="mailto:jpansuri@asu.edu"><i class="fas fa-envelope"></i></a>
         <a href="resume.pdf"><i class="fas fa-file"></i></a>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Summary -->
-    <section id="summary">
-      <h2>Summary</h2>
-      <p>Computer Science graduate with experience in data systems, backend development, and automation. Skilled in Python, SQL, Tableau, Power BI, and AWS. Actively seeking roles in Data Engineering, Analytics, and Business Tech.</p>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills">
-      <h2>Skills</h2>
-      <div class="skills">
-        <span>Python</span>
-        <span>SQL</span>
-        <span>Tableau</span>
-        <span>Power BI</span>
-        <span>Excel</span>
-        <span>AWS</span>
-        <span>Snowflake</span>
-        <span>Next.js</span>
-        <span>Node.js</span>
+  <!-- Mission Section -->
+  <section id="mission" class="mission-section">
+    <div class="container">
+      <h2>Mission</h2>
+      <div class="mission-content">
+        <div class="mission-text">
+          <p>I am a passionate Computer Science graduate with a drive to transform data into actionable insights and build innovative solutions. My mission is to bridge the gap between complex technical systems and business objectives through data-driven decision making.</p>
+          <p>With expertise in data analytics, backend development, and automation, I strive to create efficient systems that solve real-world problems and drive organizational growth. I'm committed to continuous learning and staying at the forefront of technology.</p>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Experience -->
-    <section id="experience">
+  <!-- Skills Section -->
+  <section id="skills" class="skills-section">
+    <div class="container">
+      <h2>Skills</h2>
+      <div class="skills-columns">
+        <div class="skill-column">
+          <div class="skill-item">
+            <img src="logo/python.jpeg" alt="Python" class="skill-logo">
+            <span>Python</span>
+          </div>
+          <div class="skill-item">
+            <img src="logo/sql.png" alt="SQL" class="skill-logo">
+            <span>SQL</span>
+          </div>
+          <div class="skill-item">
+            <img src="logo/tableau.png" alt="Tableau" class="skill-logo">
+            <span>Tableau</span>
+          </div>
+        </div>
+        
+        <div class="skill-column">
+          <div class="skill-item">
+            <img src="logo/power-bi.jpeg" alt="Power BI" class="skill-logo">
+            <span>Power BI</span>
+          </div>
+          <div class="skill-item">
+            <img src="logo/excel.png" alt="Excel" class="skill-logo">
+            <span>Excel</span>
+          </div>
+          <div class="skill-item">
+            <img src="logo/react-native.png" alt="React Native" class="skill-logo">
+            <span>React Native</span>
+          </div>
+        </div>
+        
+        <div class="skill-column">
+          <div class="skill-item">
+            <img src="logo/typescript.png" alt="TypeScript" class="skill-logo">
+            <span>TypeScript</span>
+          </div>
+          <div class="skill-item">
+            <img src="logo/java.png" alt="Java" class="skill-logo">
+            <span>Java</span>
+          </div>
+          <div class="skill-item">
+            <img src="logo/c++.png" alt="C++" class="skill-logo">
+            <span>C++</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="experience-section">
+    <div class="container">
       <h2>Experience</h2>
       <div class="card">
         <h3>Software Developer Intern | Next Play Games <span>(2025–Present)</span></h3>
         <ul>
-          <li>Developed features for Sportlingo app (React Native, TypeScript).</li>
-          <li>Implemented Mixpanel analytics for retention tracking.</li>
-          <li>Optimized workflows using AWS (EC2, RDS).</li>
+          <li>Developed features for Sportlingo app using React Native and TypeScript (leaderboards, OAuth, UI refinements).</li>
+          <li>Implemented Mixpanel analytics for user behavior and retention tracking, including event instrumentation and testing.</li>
+          <li>Collaborated with product/design team to streamline workflows using AWS (EC2, RDS) and GitHub for deployment.</li>
         </ul>
       </div>
       <div class="card">
         <h3>Data Analyst | ASU Law School <span>(2023–2025)</span></h3>
         <ul>
-          <li>Automated reporting using SQL, Python, Power BI.</li>
-          <li>Built dashboards to track budgets and reimbursements.</li>
+          <li>Automated reimbursement tracking and financial reporting using SQL, Python, Excel, and Power BI.</li>
+          <li>Built dashboards to monitor program budgets, events, and expenditures, improving transparency for leadership.</li>
+          <li>Designed and maintained Indigenous Innovation Initiative website on Squarespace, including interactive quiz/identifier tool.</li>
+          <li>Streamlined data entry and approval workflows, reducing manual workload for program coordinators.</li>
         </ul>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Projects -->
-    <section id="projects">
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section">
+    <div class="container">
       <h2>Projects</h2>
       <div class="card">
-        <p><strong>Capstone Project: SCIA Platform</strong> – Automated capstone workflows using Next.js, Node.js, MySQL.</p>
+        <h3>Capstone Project: SCIA Platform</h3>
+        <p>Automated project submission & sponsor-student workflows using Next.js, Node.js, and MySQL. Improved efficiency of project allocation for 200+ students.</p>
       </div>
       <div class="card">
-        <p><strong>BookBuddy iOS App</strong> – Swift-based library app with API integration.</p>
+        <h3>BookBuddy iOS App</h3>
+        <p>Swift-based library app with API integration for personalized book management. Designed with SwiftUI + SwiftData (MVVM architecture).</p>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Education -->
-    <section id="education">
+  <!-- Education Section -->
+  <section id="education" class="education-section">
+    <div class="container">
       <h2>Education</h2>
-      <p><strong>B.S. Computer Science</strong>, Arizona State University (2025)<br>
-         GPA: 4.0, Summa Cum Laude</p>
-    </section>
-  </div>
+      <div class="education-content">
+        <h3>B.S. Computer Science</h3>
+        <p>Arizona State University (2025)</p>
+        <p>GPA: 4.0, Summa Cum Laude</p>
+      </div>
+    </div>
+  </section>
 </body>
 </html>
