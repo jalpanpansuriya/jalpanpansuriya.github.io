@@ -6,16 +6,24 @@
   <title>Jalpan Pansuriya - Resume Website</title>
   <link rel="stylesheet" href="style.css">
   <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <!-- Font Awesome for Icons -->
   <script src="https://kit.fontawesome.com/8291c6847e.js" crossorigin="anonymous"></script>
 </head>
 <body>
+  <!-- Loading Animation -->
+  <div id="loader">
+    <div class="loader-content">
+      <div class="loader-ring"></div>
+      <p>Loading...</p>
+    </div>
+  </div>
+
   <!-- Navigation -->
-  <header>
+  <header id="header">
     <div class="header-content">
       <div class="logo">Jalpan Pansuriya</div>
-      <nav>
+      <nav id="nav">
         <a href="#hero">About</a>
         <a href="#mission">Mission</a>
         <a href="#skills">Skills</a>
@@ -23,20 +31,44 @@
         <a href="#projects">Projects</a>
         <a href="#education">Education</a>
       </nav>
+      <button class="menu-toggle" id="menuToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
     </div>
   </header>
 
   <!-- Hero Section -->
   <section id="hero" class="hero-section">
-    <div class="hero-content">
-      <img src="profile.jpg" alt="Profile Picture" class="profile">
-      <h1>Jalpan Pansuriya</h1>
-      <p class="title">Data Analyst & Software Developer</p>
+    <canvas id="particles"></canvas>
+    <div class="hero-content fade-in">
+      <div class="profile-container">
+        <img src="profile.jpg" alt="Profile Picture" class="profile">
+        <div class="profile-ring"></div>
+      </div>
+      <h1 class="slide-up">Jalpan Pansuriya</h1>
+      <div class="title-container">
+        <p class="title typewriter" id="typing-text"></p>
+        <span class="cursor">|</span>
+      </div>
       
-      <div class="links">
-        <a href="https://www.linkedin.com/in/jpansuri"><i class="fab fa-linkedin"></i></a>
-        <a href="mailto:jpansuri@asu.edu"><i class="fas fa-envelope"></i></a>
-        <a href="resume.pdf"><i class="fas fa-file"></i></a>
+      <div class="links fade-in-delay">
+        <a href="https://www.linkedin.com/in/jpansuri" target="_blank" class="social-link">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="mailto:jpansuri@asu.edu" class="social-link">
+          <i class="fas fa-envelope"></i>
+        </a>
+        <a href="resume.pdf" target="_blank" class="social-link">
+          <i class="fas fa-file"></i>
+        </a>
+      </div>
+      
+      <div class="scroll-indicator">
+        <div class="mouse">
+          <div class="wheel"></div>
+        </div>
       </div>
     </div>
   </section>
@@ -57,50 +89,104 @@
   <!-- Skills Section -->
   <section id="skills" class="skills-section">
     <div class="container">
-      <h2>Skills</h2>
+      <h2 class="section-title">Skills</h2>
       <div class="skills-columns">
         <div class="skill-column">
           <div class="skill-item">
-            <img src="logo/python.jpeg" alt="Python" class="skill-logo">
+            <div class="skill-icon-container">
+              <img src="logo/python.jpeg" alt="Python" class="skill-logo">
+              <div class="skill-badge">95%</div>
+            </div>
             <span>Python</span>
+            <div class="skill-bar">
+              <div class="skill-progress" data-percent="95"></div>
+            </div>
           </div>
           <div class="skill-item">
-            <img src="logo/sql.png" alt="SQL" class="skill-logo">
+            <div class="skill-icon-container">
+              <img src="logo/sql.png" alt="SQL" class="skill-logo">
+              <div class="skill-badge">90%</div>
+            </div>
             <span>SQL</span>
+            <div class="skill-bar">
+              <div class="skill-progress" data-percent="90"></div>
+            </div>
           </div>
           <div class="skill-item">
-            <img src="logo/tableau.png" alt="Tableau" class="skill-logo">
+            <div class="skill-icon-container">
+              <img src="logo/tableau.png" alt="Tableau" class="skill-logo">
+              <div class="skill-badge">85%</div>
+            </div>
             <span>Tableau</span>
+            <div class="skill-bar">
+              <div class="skill-progress" data-percent="85"></div>
+            </div>
           </div>
         </div>
         
         <div class="skill-column">
           <div class="skill-item">
-            <img src="logo/power-bi.jpeg" alt="Power BI" class="skill-logo">
+            <div class="skill-icon-container">
+              <img src="logo/power-bi.jpeg" alt="Power BI" class="skill-logo">
+              <div class="skill-badge">90%</div>
+            </div>
             <span>Power BI</span>
+            <div class="skill-bar">
+              <div class="skill-progress" data-percent="90"></div>
+            </div>
           </div>
           <div class="skill-item">
-            <img src="logo/excel.png" alt="Excel" class="skill-logo">
+            <div class="skill-icon-container">
+              <img src="logo/excel.png" alt="Excel" class="skill-logo">
+              <div class="skill-badge">92%</div>
+            </div>
             <span>Excel</span>
+            <div class="skill-bar">
+              <div class="skill-progress" data-percent="92"></div>
+            </div>
           </div>
           <div class="skill-item">
-            <img src="logo/react-native.png" alt="React Native" class="skill-logo">
+            <div class="skill-icon-container">
+              <img src="logo/react-native.png" alt="React Native" class="skill-logo">
+              <div class="skill-badge">80%</div>
+            </div>
             <span>React Native</span>
+            <div class="skill-bar">
+              <div class="skill-progress" data-percent="80"></div>
+            </div>
           </div>
         </div>
         
         <div class="skill-column">
           <div class="skill-item">
-            <img src="logo/typescript.png" alt="TypeScript" class="skill-logo">
+            <div class="skill-icon-container">
+              <img src="logo/typescript.png" alt="TypeScript" class="skill-logo">
+              <div class="skill-badge">85%</div>
+            </div>
             <span>TypeScript</span>
+            <div class="skill-bar">
+              <div class="skill-progress" data-percent="85"></div>
+            </div>
           </div>
           <div class="skill-item">
-            <img src="logo/java.png" alt="Java" class="skill-logo">
+            <div class="skill-icon-container">
+              <img src="logo/java.png" alt="Java" class="skill-logo">
+              <div class="skill-badge">88%</div>
+            </div>
             <span>Java</span>
+            <div class="skill-bar">
+              <div class="skill-progress" data-percent="88"></div>
+            </div>
           </div>
           <div class="skill-item">
-            <img src="logo/c++.png" alt="C++" class="skill-logo">
+            <div class="skill-icon-container">
+              <img src="logo/c++.png" alt="C++" class="skill-logo">
+              <div class="skill-badge">82%</div>
+            </div>
             <span>C++</span>
+            <div class="skill-bar">
+              <div class="skill-progress" data-percent="82"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -151,11 +237,26 @@
     <div class="container">
       <h2>Education</h2>
       <div class="education-content">
-        <h3>B.S. Computer Science</h3>
-        <p>Arizona State University (2025)</p>
-        <p>GPA: 4.0, Summa Cum Laude</p>
+        <div class="education-card">
+          <i class="fas fa-graduation-cap"></i>
+          <h3>B.S. Computer Science</h3>
+          <p class="university">Arizona State University</p>
+          <p class="year">2025</p>
+          <div class="gpa-badge">
+            <i class="fas fa-star"></i>
+            <span>GPA: 4.0</span>
+            <span class="honor">Summa Cum Laude</span>
+          </div>
+        </div>
       </div>
     </div>
   </section>
+
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="script.js"></script>
 </body>
 </html>
