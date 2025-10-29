@@ -186,12 +186,12 @@ header nav a:hover {
   transform: rotate(0deg);
 }
 
-.light-mode #sunIcon {
+body.light-mode #sunIcon {
   opacity: 1;
   transform: rotate(0deg) scale(1);
 }
 
-.light-mode #moonIcon {
+body.light-mode #moonIcon {
   opacity: 0;
   transform: rotate(-90deg) scale(0.8);
 }
@@ -1009,131 +1009,128 @@ h2::after {
 }
 
 /* Light Mode Styles */
-.light-mode {
+body.light-mode {
+  background: #f8f9fa;
+  color: #333;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.light-mode body {
-  background: #f8f9fa;
-  color: #333;
-}
-
-.light-mode header {
+body.light-mode header {
   background: rgba(255, 255, 255, 0.95);
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.light-mode header.scrolled {
+body.light-mode header.scrolled {
   background: rgba(255, 255, 255, 0.98);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-.light-mode .logo {
+body.light-mode .logo {
   color: #1a202c;
 }
 
-.light-mode header nav a {
+body.light-mode header nav a {
   color: #2d3748;
 }
 
-.light-mode header nav a:hover {
+body.light-mode header nav a:hover {
   color: #58a6ff;
 }
 
-.light-mode .hero-section::before {
+body.light-mode .hero-section::before {
   background: rgba(255, 255, 255, 0.7);
 }
 
-.light-mode .hero-content h1,
-.light-mode .mission-section,
-.light-mode .experience-section,
-.light-mode .projects-section,
-.light-mode .education-section {
+body.light-mode .hero-content h1,
+body.light-mode .mission-section,
+body.light-mode .experience-section,
+body.light-mode .projects-section,
+body.light-mode .education-section {
   color: #1a202c;
 }
 
-.light-mode h2 {
+body.light-mode h2 {
   color: #1a202c !important;
 }
 
-.light-mode .mission-text p,
-.light-mode .card p,
-.light-mode .card li {
+body.light-mode .mission-text p,
+body.light-mode .card p,
+body.light-mode .card li {
   color: #4a5568;
 }
 
-.light-mode .mission-section {
+body.light-mode .mission-section {
   background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
 }
 
-.light-mode .experience-section {
+body.light-mode .experience-section {
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
 }
 
-.light-mode .projects-section {
+body.light-mode .projects-section {
   background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
 }
 
-.light-mode .education-section {
+body.light-mode .education-section {
   background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
 }
 
-.light-mode .card {
+body.light-mode .card {
   background: rgba(255, 255, 255, 0.95);
   border: 2px solid rgba(0, 0, 0, 0.1);
   color: #333;
 }
 
-.light-mode .card h3 {
+body.light-mode .card h3 {
   color: #1a202c;
 }
 
-.light-mode .card span {
+body.light-mode .card span {
   color: #4a5568;
   background: rgba(88, 166, 255, 0.1);
   border: 1px solid rgba(88, 166, 255, 0.3);
 }
 
-.light-mode .project-tech {
+body.light-mode .project-tech {
   color: #1e40af !important;
   font-weight: 600;
 }
 
-.light-mode .education-card {
+body.light-mode .education-card {
   background: linear-gradient(135deg, rgba(88, 166, 255, 0.1), rgba(31, 111, 235, 0.1));
   border: 2px solid rgba(88, 166, 255, 0.3);
 }
 
-.light-mode .education-card h3 {
+body.light-mode .education-card h3 {
   color: #333;
 }
 
-.light-mode .education-card .university {
+body.light-mode .education-card .university {
   color: #58a6ff;
 }
 
-.light-mode .education-card .year {
+body.light-mode .education-card .year {
   color: #666;
 }
 
-.light-mode .education-card .gpa-badge {
+body.light-mode .education-card .gpa-badge {
   background: linear-gradient(135deg, rgba(88, 166, 255, 0.2), rgba(31, 111, 235, 0.2));
   border: 2px solid rgba(88, 166, 255, 0.3);
 }
 
-.light-mode .gpa-badge span {
+body.light-mode .gpa-badge span {
   color: #333;
 }
 
-.light-mode .honor {
+body.light-mode .honor {
   background: rgba(88, 166, 255, 0.3);
 }
 
-.light-mode .mode-toggle {
+body.light-mode .mode-toggle {
   background: rgba(88, 166, 255, 0.1);
   color: #333;
 }
 
-.light-mode .mode-toggle:hover {
+body.light-mode .mode-toggle:hover {
   background: rgba(88, 166, 255, 0.2);
 }
