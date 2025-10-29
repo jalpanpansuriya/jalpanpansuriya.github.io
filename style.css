@@ -186,12 +186,12 @@ header nav a:hover {
   transform: rotate(0deg);
 }
 
-body.light-mode #sunIcon {
+.light-mode #sunIcon {
   opacity: 1;
   transform: rotate(0deg) scale(1);
 }
 
-body.light-mode #moonIcon {
+.light-mode #moonIcon {
   opacity: 0;
   transform: rotate(-90deg) scale(0.8);
 }
@@ -1020,117 +1020,117 @@ body.light-mode header {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-body.light-mode header.scrolled {
+.light-mode header.scrolled {
   background: rgba(255, 255, 255, 0.98);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
 }
 
-body.light-mode .logo {
+.light-mode .logo {
   color: #1a202c;
 }
 
-body.light-mode header nav a {
+.light-mode header nav a {
   color: #2d3748;
 }
 
-body.light-mode header nav a:hover {
+.light-mode header nav a:hover {
   color: #58a6ff;
 }
 
-body.light-mode .hero-section::before {
+.light-mode .hero-section::before {
   background: rgba(255, 255, 255, 0.7);
 }
 
-body.light-mode .hero-content h1,
-body.light-mode .mission-section,
-body.light-mode .experience-section,
-body.light-mode .projects-section,
-body.light-mode .education-section {
+.light-mode .hero-content h1,
+.light-mode .mission-section,
+.light-mode .experience-section,
+.light-mode .projects-section,
+.light-mode .education-section {
   color: #1a202c;
 }
 
-body.light-mode h2 {
+.light-mode h2 {
   color: #1a202c !important;
 }
 
-body.light-mode .mission-text p,
-body.light-mode .card p,
-body.light-mode .card li {
+.light-mode .mission-text p,
+.light-mode .card p,
+.light-mode .card li {
   color: #4a5568;
 }
 
-body.light-mode .mission-section {
+.light-mode .mission-section {
   background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
 }
 
-body.light-mode .experience-section {
+.light-mode .experience-section {
   background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
 }
 
-body.light-mode .projects-section {
+.light-mode .projects-section {
   background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
 }
 
-body.light-mode .education-section {
+.light-mode .education-section {
   background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
 }
 
-body.light-mode .card {
+.light-mode .card {
   background: rgba(255, 255, 255, 0.95);
   border: 2px solid rgba(0, 0, 0, 0.1);
   color: #333;
 }
 
-body.light-mode .card h3 {
+.light-mode .card h3 {
   color: #1a202c;
 }
 
-body.light-mode .card span {
+.light-mode .card span {
   color: #4a5568;
   background: rgba(88, 166, 255, 0.1);
   border: 1px solid rgba(88, 166, 255, 0.3);
 }
 
-body.light-mode .project-tech {
+.light-mode .project-tech {
   color: #1e40af !important;
   font-weight: 600;
 }
 
-body.light-mode .education-card {
+.light-mode .education-card {
   background: linear-gradient(135deg, rgba(88, 166, 255, 0.1), rgba(31, 111, 235, 0.1));
   border: 2px solid rgba(88, 166, 255, 0.3);
 }
 
-body.light-mode .education-card h3 {
+.light-mode .education-card h3 {
   color: #333;
 }
 
-body.light-mode .education-card .university {
+.light-mode .education-card .university {
   color: #58a6ff;
 }
 
-body.light-mode .education-card .year {
+.light-mode .education-card .year {
   color: #666;
 }
 
-body.light-mode .education-card .gpa-badge {
+.light-mode .education-card .gpa-badge {
   background: linear-gradient(135deg, rgba(88, 166, 255, 0.2), rgba(31, 111, 235, 0.2));
   border: 2px solid rgba(88, 166, 255, 0.3);
 }
 
-body.light-mode .gpa-badge span {
+.light-mode .gpa-badge span {
   color: #333;
 }
 
-body.light-mode .honor {
+.light-mode .honor {
   background: rgba(88, 166, 255, 0.3);
 }
 
-body.light-mode .mode-toggle {
+.light-mode .mode-toggle {
   background: rgba(88, 166, 255, 0.1);
   color: #333;
 }
 
-body.light-mode .mode-toggle:hover {
+.light-mode .mode-toggle:hover {
   background: rgba(88, 166, 255, 0.2);
 }
