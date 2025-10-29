@@ -91,7 +91,13 @@ header.scrolled {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  padding: 0 10px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .logo {
@@ -140,6 +146,54 @@ header nav a:hover::after {
 header nav a:hover {
   color: #58a6ff;
   transform: translateY(-2px);
+}
+
+.mode-toggle {
+  position: relative;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(88, 166, 255, 0.1);
+  color: #e6edf3;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(88, 166, 255, 0.3);
+}
+
+.mode-toggle:hover {
+  background: rgba(88, 166, 255, 0.2);
+  border-color: #58a6ff;
+  transform: scale(1.05);
+}
+
+.mode-toggle i {
+  position: absolute;
+  font-size: 12px;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#sunIcon {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.8);
+}
+
+#moonIcon {
+  opacity: 1;
+  transform: rotate(0deg);
+}
+
+.light-mode #sunIcon {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+.light-mode #moonIcon {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.8);
 }
 
 .menu-toggle {
@@ -470,156 +524,131 @@ h2::after {
   align-items: center;
 }
 
-.skills-columns {
-  display: flex;
-  justify-content: center;
+/* Skills Categories */
+.skills-categories {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 40px;
   margin-top: 40px;
-  max-width: 1200px;
+  max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
-  flex-wrap: wrap;
+  justify-items: center;
 }
 
-.skill-column {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  flex: 1;
-  min-width: 200px;
-  max-width: 300px;
+.skills-categories .skill-category:nth-child(4) {
+  grid-column: 2;
+  justify-self: center;
 }
 
-.skill-item {
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  padding: 25px;
+.skill-category {
   background: rgba(255, 255, 255, 0.95);
   border-radius: 15px;
-  border: 2px solid transparent;
-  transition: all 0.3s ease;
+  padding: 30px 20px;
+  text-align: center;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  position: relative;
-  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid transparent;
 }
 
-.skill-item::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(88, 166, 255, 0.1), transparent);
-  transition: left 0.5s ease;
+.skill-category:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(88, 166, 255, 0.2);
+  border-color: rgba(88, 166, 255, 0.3);
 }
 
-.skill-item:hover::before {
-  left: 100%;
+.skill-category h3 {
+  color: #333;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #58a6ff;
 }
 
-.skill-item:hover {
-  transform: translateY(-10px) scale(1.02);
-  border-color: #58a6ff;
-  box-shadow: 0 15px 35px rgba(88, 166, 255, 0.3);
-  background: rgba(255, 255, 255, 1);
+.skill-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
-.skill-icon-container {
-  position: relative;
-  margin-bottom: 15px;
+.skill-icon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 15px;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  background: rgba(88, 166, 255, 0.05);
+  border: 1px solid rgba(88, 166, 255, 0.1);
 }
 
-.skill-logo {
-  width: 60px;
-  height: 60px;
+.skill-icon:hover {
+  transform: scale(1.1);
+  background: rgba(88, 166, 255, 0.1);
+  border-color: rgba(88, 166, 255, 0.3);
+}
+
+.skill-icon .skill-logo {
+  width: 50px;
+  height: 50px;
   object-fit: contain;
-  filter: brightness(1.1);
   transition: transform 0.3s ease;
 }
 
-.skill-item:hover .skill-logo {
-  transform: scale(1.1) rotate(5deg);
+.skill-icon:hover .skill-logo {
+  transform: scale(1.1);
 }
 
-.skill-badge {
-  position: absolute;
-  top: -8px;
-  right: -8px;
-  background: linear-gradient(135deg, #58a6ff, #1f6feb);
-  color: white;
-  padding: 4px 8px;
-  border-radius: 10px;
-  font-size: 12px;
-  font-weight: 600;
-  box-shadow: 0 4px 10px rgba(88, 166, 255, 0.3);
-}
-
-.skill-item span {
-  font-size: 16px;
-  font-weight: 600;
-  color: #333333;
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-.skill-bar {
-  width: 100%;
-  height: 8px;
-  background: #e0e0e0;
-  border-radius: 10px;
-  overflow: hidden;
-  position: relative;
-}
-
-.skill-progress {
-  height: 100%;
-  background: linear-gradient(90deg, #58a6ff, #1f6feb);
-  border-radius: 10px;
-  width: 0%;
-  transition: width 2s ease;
-  position: relative;
-}
-
-.skill-progress::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
-  animation: shimmer 2s infinite;
-}
-
-@keyframes shimmer {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(100%); }
+.skill-icon span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
 }
 
 /* Responsive adjustments for Skills */
 @media (max-width: 900px) {
-  .skills-columns {
-    flex-direction: column;
+  .skills-categories {
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
-    align-items: center;
   }
   
-  .skill-column {
-    max-width: 100%;
-    width: 100%;
+  .skills-categories .skill-category:nth-child(4) {
+    grid-column: 1 / -1;
+    justify-self: center;
+    max-width: 300px;
   }
 }
 
-@media (max-width: 480px) {
-  .skill-item {
-    padding: 20px;
+@media (max-width: 600px) {
+  .skills-categories {
+    grid-template-columns: 1fr;
+    gap: 25px;
   }
   
-  .skill-logo {
-    width: 50px;
-    height: 50px;
+  .skills-categories .skill-category:nth-child(4) {
+    grid-column: 1;
+    justify-self: center;
+    max-width: none;
+  }
+  
+  .skill-category {
+    padding: 25px 15px;
+  }
+  
+  .skill-icons {
+    gap: 15px;
+  }
+  
+  .skill-icon {
+    padding: 12px;
+  }
+  
+  .skill-icon .skill-logo {
+    width: 45px;
+    height: 45px;
   }
 }
 
@@ -715,6 +744,48 @@ h2::after {
   min-height: 100vh;
   display: flex;
   align-items: center;
+}
+
+.project-tech {
+  color: #58a6ff;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+  font-style: italic;
+}
+
+.project-links {
+  margin-top: 20px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #58a6ff;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 20px;
+  border: 2px solid rgba(88, 166, 255, 0.3);
+  border-radius: 25px;
+  background: rgba(88, 166, 255, 0.1);
+  transition: all 0.3s ease;
+  font-size: 14px;
+}
+
+.project-link:hover {
+  background: rgba(88, 166, 255, 0.2);
+  border-color: #58a6ff;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(88, 166, 255, 0.3);
+  color: #1f6feb;
+}
+
+.project-link i {
+  font-size: 12px;
 }
 
 /* Education Section */
@@ -860,9 +931,17 @@ h2::after {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .header-content {
-    flex-direction: row;
-    gap: 0;
+  .header-right {
+    gap: 10px;
+  }
+  
+  .mode-toggle {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .mode-toggle i {
+    font-size: 11px;
   }
   
   .menu-toggle {
@@ -927,4 +1006,134 @@ h2::after {
     bottom: 20px;
     right: 20px;
   }
+}
+
+/* Light Mode Styles */
+.light-mode {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.light-mode body {
+  background: #f8f9fa;
+  color: #333;
+}
+
+.light-mode header {
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.light-mode header.scrolled {
+  background: rgba(255, 255, 255, 0.98);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.light-mode .logo {
+  color: #1a202c;
+}
+
+.light-mode header nav a {
+  color: #2d3748;
+}
+
+.light-mode header nav a:hover {
+  color: #58a6ff;
+}
+
+.light-mode .hero-section::before {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+.light-mode .hero-content h1,
+.light-mode .mission-section,
+.light-mode .experience-section,
+.light-mode .projects-section,
+.light-mode .education-section {
+  color: #1a202c;
+}
+
+.light-mode h2 {
+  color: #1a202c !important;
+}
+
+.light-mode .mission-text p,
+.light-mode .card p,
+.light-mode .card li {
+  color: #4a5568;
+}
+
+.light-mode .mission-section {
+  background: linear-gradient(135deg, #ffffff 0%, #f0f0f0 100%);
+}
+
+.light-mode .experience-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.light-mode .projects-section {
+  background: linear-gradient(135deg, #f0f0f0 0%, #e0e0e0 100%);
+}
+
+.light-mode .education-section {
+  background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+}
+
+.light-mode .card {
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  color: #333;
+}
+
+.light-mode .card h3 {
+  color: #1a202c;
+}
+
+.light-mode .card span {
+  color: #4a5568;
+  background: rgba(88, 166, 255, 0.1);
+  border: 1px solid rgba(88, 166, 255, 0.3);
+}
+
+.light-mode .project-tech {
+  color: #1e40af !important;
+  font-weight: 600;
+}
+
+.light-mode .education-card {
+  background: linear-gradient(135deg, rgba(88, 166, 255, 0.1), rgba(31, 111, 235, 0.1));
+  border: 2px solid rgba(88, 166, 255, 0.3);
+}
+
+.light-mode .education-card h3 {
+  color: #333;
+}
+
+.light-mode .education-card .university {
+  color: #58a6ff;
+}
+
+.light-mode .education-card .year {
+  color: #666;
+}
+
+.light-mode .education-card .gpa-badge {
+  background: linear-gradient(135deg, rgba(88, 166, 255, 0.2), rgba(31, 111, 235, 0.2));
+  border: 2px solid rgba(88, 166, 255, 0.3);
+}
+
+.light-mode .gpa-badge span {
+  color: #333;
+}
+
+.light-mode .honor {
+  background: rgba(88, 166, 255, 0.3);
+}
+
+.light-mode .mode-toggle {
+  background: rgba(88, 166, 255, 0.1);
+  color: #333;
+}
+
+.light-mode .mode-toggle:hover {
+  background: rgba(88, 166, 255, 0.2);
 }

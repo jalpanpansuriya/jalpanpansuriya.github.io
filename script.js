@@ -42,10 +42,11 @@ document.querySelectorAll('nav a').forEach(link => {
 // Typing Effect
 const typingText = document.getElementById('typing-text');
 const texts = [
-  'Data Analyst & Software Developer',
-  'Python Developer',
+  'Data Analyst',
+  'Software Developer',
   'Data Visualization Specialist',
-  'Full-Stack Developer'
+  'Full-Stack Developer',
+  'Python Developer'
 ];
 let textIndex = 0;
 let charIndex = 0;
@@ -175,27 +176,12 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, observerOptions);
 
-document.querySelectorAll('.card, .skill-item, .mission-text, .education-card').forEach(el => {
+document.querySelectorAll('.card, .skill-category, .mission-text, .education-card').forEach(el => {
   el.classList.add('scroll-reveal');
   observer.observe(el);
 });
 
-// Skill Progress Animation
-const skillObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      const progressBars = entry.target.querySelectorAll('.skill-progress');
-      progressBars.forEach(bar => {
-        const percent = bar.getAttribute('data-percent');
-        bar.style.width = percent + '%';
-      });
-    }
-  });
-}, { threshold: 0.5 });
-
-document.querySelectorAll('.skill-item').forEach(item => {
-  skillObserver.observe(item);
-});
+// Skill Progress Animation - Removed (no longer using progress bars)
 
 // Back to Top Button
 const backToTop = document.getElementById('backToTop');
@@ -265,6 +251,27 @@ window.addEventListener('scroll', () => {
   if (hero) {
     hero.style.backgroundPosition = `center ${scrolled * 0.5}px`;
   }
+});
+
+// Dark/Light Mode Toggle
+const modeToggle = document.getElementById('modeToggle');
+const body = document.body;
+
+// Check for saved theme preference or default to dark mode
+const currentTheme = localStorage.getItem('theme') || 'dark';
+
+// Set the theme on page load
+if (currentTheme === 'light') {
+  body.classList.add('light-mode');
+}
+
+// Toggle theme function
+modeToggle.addEventListener('click', () => {
+  body.classList.toggle('light-mode');
+  
+  // Save the theme preference
+  const theme = body.classList.contains('light-mode') ? 'light' : 'dark';
+  localStorage.setItem('theme', theme);
 });
 
 // Console welcome message

@@ -23,14 +23,20 @@
   <header id="header">
     <div class="header-content">
       <div class="logo">Jalpan Pansuriya</div>
-      <nav id="nav">
-        <a href="#hero">About</a>
-        <a href="#mission">Mission</a>
-        <a href="#skills">Skills</a>
-        <a href="#experience">Experience</a>
-        <a href="#projects">Projects</a>
-        <a href="#education">Education</a>
-      </nav>
+      <div class="header-right">
+        <nav id="nav">
+          <a href="#hero">About</a>
+          <a href="#mission">Mission</a>
+          <a href="#skills">Skills</a>
+          <a href="#experience">Experience</a>
+          <a href="#projects">Projects</a>
+          <a href="#education">Education</a>
+        </nav>
+        <button class="mode-toggle" id="modeToggle" aria-label="Toggle dark/light mode">
+          <i class="fas fa-moon" id="moonIcon"></i>
+          <i class="fas fa-sun" id="sunIcon"></i>
+        </button>
+      </div>
       <button class="menu-toggle" id="menuToggle">
         <span></span>
         <span></span>
@@ -65,11 +71,11 @@
         </a>
       </div>
       
-      <div class="scroll-indicator">
+      <!-- <div class="scroll-indicator">
         <div class="mouse">
           <div class="wheel"></div>
         </div>
-      </div>
+      </div> -->
     </div>
   </section>
 
@@ -90,102 +96,79 @@
   <section id="skills" class="skills-section">
     <div class="container">
       <h2 class="section-title">Skills</h2>
-      <div class="skills-columns">
-        <div class="skill-column">
-          <div class="skill-item">
-            <div class="skill-icon-container">
+      <div class="skills-categories">
+        <div class="skill-category">
+          <h3>Backend</h3>
+          <div class="skill-icons">
+            <div class="skill-icon">
               <img src="logo/python.jpeg" alt="Python" class="skill-logo">
-              <div class="skill-badge">95%</div>
+              <span>Python</span>
             </div>
-            <span>Python</span>
-            <div class="skill-bar">
-              <div class="skill-progress" data-percent="95"></div>
-            </div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-icon-container">
+            <div class="skill-icon">
               <img src="logo/sql.png" alt="SQL" class="skill-logo">
-              <div class="skill-badge">90%</div>
+              <span>SQL</span>
             </div>
-            <span>SQL</span>
-            <div class="skill-bar">
-              <div class="skill-progress" data-percent="90"></div>
+            <div class="skill-icon">
+              <img src="logo/mongodb.png" alt="MongoDB" class="skill-logo">
+              <span>MongoDB</span>
+            </div>
+            <div class="skill-icon">
+              <img src="logo/linux.png" alt="Linux" class="skill-logo">
+              <span>Linux</span>
             </div>
           </div>
-          <div class="skill-item">
-            <div class="skill-icon-container">
+        </div>
+        
+        <div class="skill-category">
+          <h3>Analytics</h3>
+          <div class="skill-icons">
+            <div class="skill-icon">
               <img src="logo/tableau.png" alt="Tableau" class="skill-logo">
-              <div class="skill-badge">85%</div>
+              <span>Tableau</span>
             </div>
-            <span>Tableau</span>
-            <div class="skill-bar">
-              <div class="skill-progress" data-percent="85"></div>
-            </div>
-          </div>
-        </div>
-        
-        <div class="skill-column">
-          <div class="skill-item">
-            <div class="skill-icon-container">
-              <img src="logo/power-bi.jpeg" alt="Power BI" class="skill-logo">
-              <div class="skill-badge">90%</div>
-            </div>
-            <span>Power BI</span>
-            <div class="skill-bar">
-              <div class="skill-progress" data-percent="90"></div>
-            </div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-icon-container">
+            <div class="skill-icon">
               <img src="logo/excel.png" alt="Excel" class="skill-logo">
-              <div class="skill-badge">92%</div>
+              <span>Excel</span>
             </div>
-            <span>Excel</span>
-            <div class="skill-bar">
-              <div class="skill-progress" data-percent="92"></div>
-            </div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-icon-container">
-              <img src="logo/react-native.png" alt="React Native" class="skill-logo">
-              <div class="skill-badge">80%</div>
-            </div>
-            <span>React Native</span>
-            <div class="skill-bar">
-              <div class="skill-progress" data-percent="80"></div>
+            <div class="skill-icon">
+              <img src="logo/power-bi.jpeg" alt="Power BI" class="skill-logo">
+              <span>Power BI</span>
             </div>
           </div>
         </div>
         
-        <div class="skill-column">
-          <div class="skill-item">
-            <div class="skill-icon-container">
+        <div class="skill-category">
+          <h3>Development</h3>
+          <div class="skill-icons">
+            <div class="skill-icon">
               <img src="logo/typescript.png" alt="TypeScript" class="skill-logo">
-              <div class="skill-badge">85%</div>
+              <span>TypeScript</span>
             </div>
-            <span>TypeScript</span>
-            <div class="skill-bar">
-              <div class="skill-progress" data-percent="85"></div>
-            </div>
-          </div>
-          <div class="skill-item">
-            <div class="skill-icon-container">
+            <div class="skill-icon">
               <img src="logo/java.png" alt="Java" class="skill-logo">
-              <div class="skill-badge">88%</div>
+              <span>Java</span>
             </div>
-            <span>Java</span>
-            <div class="skill-bar">
-              <div class="skill-progress" data-percent="88"></div>
+            <div class="skill-icon">
+              <img src="logo/c++.png" alt="C++" class="skill-logo">
+              <span>C++</span>
             </div>
           </div>
-          <div class="skill-item">
-            <div class="skill-icon-container">
-              <img src="logo/c++.png" alt="C++" class="skill-logo">
-              <div class="skill-badge">82%</div>
+        </div>
+        
+        <div class="skill-category">
+          <h3>Mobile</h3>
+          <div class="skill-icons">
+            <div class="skill-icon">
+              <img src="logo/react-native.png" alt="React Native" class="skill-logo">
+              <span>React Native</span>
             </div>
-            <span>C++</span>
-            <div class="skill-bar">
-              <div class="skill-progress" data-percent="82"></div>
+            <div class="skill-icon">
+              <img src="logo/iOS.png" alt="iOS" class="skill-logo">
+              <span>iOS</span>
+            </div>
+            <div class="skill-icon">
+              <img src="logo/android.png" alt="Android" class="skill-logo">
+              <span>Android</span>
             </div>
           </div>
         </div>
@@ -222,12 +205,31 @@
     <div class="container">
       <h2>Projects</h2>
       <div class="card">
+        <h3>Portfolio Analytics Dashboard</h3>
+        <p class="project-tech">Streamlit, Python, MySQL | May 2025 - July 2025</p>
+        <p>Developed a comprehensive portfolio analytics dashboard integrating live market data (Yahoo Finance API) for real-time tracking, profit/loss computation, and sector allocation visualization. Engineered an advanced backtesting engine with Sharpe, Sortino, and Calmar ratios, drawdown analysis, and Monte Carlo simulations to forecast performance and evaluate risk-return trade-offs. Automated portfolio data ingestion and cleaning from Robinhood exports using Pandas/Numpy pipelines, enabling interactive benchmarking against S&P 500 and Nasdaq indices.</p>
+        <div class="project-links">
+          <a href="https://portfolio-dashboard-jpansuriya.streamlit.app/" target="_blank" class="project-link">
+            <i class="fas fa-external-link-alt"></i>
+            View Live Dashboard
+          </a>
+        </div>
+      </div>
+      <div class="card">
         <h3>Capstone Project: SCIA Platform</h3>
-        <p>Automated project submission & sponsor-student workflows using Next.js, Node.js, and MySQL. Improved efficiency of project allocation for 200+ students.</p>
+        <p class="project-tech">Next.js, Node.js, MySQL, Python | Aug 2024 - May 2025</p>
+        <p>Built and deployed automation scripts + REST APIs that processed 300+ course-section datasets across 10+ departments, replacing fragmented spreadsheets with a unified data workflow. Migrated MongoDB to MySQL with zero loss, standardizing schema design for long-term maintainability and enabling faster queries for admin reports. Designed internal data dashboards to summarize team assignments and project distributions, providing stakeholders clear visibility into workload and progress.</p>
+        <div class="project-links">
+          <a href="https://asucapstone.com/" target="_blank" class="project-link">
+            <i class="fas fa-external-link-alt"></i>
+            View Live Website
+          </a>
+        </div>
       </div>
       <div class="card">
         <h3>BookBuddy iOS App</h3>
-        <p>Swift-based library app with API integration for personalized book management. Designed with SwiftUI + SwiftData (MVVM architecture).</p>
+        <p class="project-tech">Swift, SwiftData, Open Library API, MVVM Architecture | Aug 2024 - Dec 2024</p>
+        <p>Designed and developed an iOS app using Swift and SwiftData, enabling users to manage and track their reading across 1000+ book entries with persistent storage and intuitive UI. Integrated the Open Library API to provide dynamic book suggestions, increasing user engagement and app retention value.</p>
       </div>
     </div>
   </section>
